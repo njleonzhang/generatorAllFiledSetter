@@ -1,11 +1,11 @@
 <idea-plugin>
-  <id>com.leon.generate.all.filed.setter</id>
-  <name>generateAllFiledSetter</name>
+  <id>com.leon.databinding.generate.all.filed.setter</id>
+  <name>databinding generateAllFiledSetter</name>
   <version>1.0</version>
   <vendor email="zpczjl@126.com" url="https://github.com/njleonzhang/">leon zhang</vendor>
 
   <description><![CDATA[
-            <p>Adds an option to generate a set function for all filed to the generate menu (cmd + n).</p>
+            <p>Adds an option to generate a set function with notifyChange for all filed to the generate menu (cmd + n).</p>
             <p>fork from https://github.com/jkovacs/CopyConstructorPlugin</p>
     ]]></description>
 
@@ -25,8 +25,8 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="GenerateCopyConstructor" class="copyConstructor.GenerateAllSetterAction" text="All Filed Setter"
-            description="Generates a all filed setter">
+    <action id="GenerateCopyConstructor" class="copyConstructor.GenerateAllSetterAction" text="DB All Filed Setter"
+            description="Generates a all filed setter for databinding">
       <add-to-group group-id="JavaGenerateGroup1" anchor="after" relative-to-action="GenerateConstructor"/>
     </action>
   </actions>

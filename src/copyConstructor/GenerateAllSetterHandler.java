@@ -62,6 +62,7 @@ public class GenerateAllSetterHandler extends GenerateMembersHandlerBase {
 			code.append(String.format("this.%s = %s.%s;", name, parameterName, name));
 		}
 
+		code.append("notifyChange();\n");
 		code.append("}");
 
 		PsiElementFactory elementFactory = JavaPsiFacade.getElementFactory(psiClass.getProject());

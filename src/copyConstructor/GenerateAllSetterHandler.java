@@ -51,6 +51,7 @@ public class GenerateAllSetterHandler extends GenerateMembersHandlerBase {
 		StringBuilder code = new StringBuilder();
 		code.append(String.format("public void set(%s %s) {", psiClass.getName(), parameterName));
 
+		code.append(String.format("if (%s != null) {", parameterName));
 		boolean superclassHasCopyConstructor = ConstructorUtil.hasCopyConstructor(psiClass.getSuperClass());
 		if (superclassHasCopyConstructor) {
 			code.append(String.format("super(%s);", parameterName));
@@ -63,7 +64,7 @@ public class GenerateAllSetterHandler extends GenerateMembersHandlerBase {
 		}
 
 		code.append("notifyChange();\n");
-		code.append("}");
+		code.append("}\n}");
 
 		PsiElementFactory elementFactory = JavaPsiFacade.getElementFactory(psiClass.getProject());
 		PsiMethod constructor = elementFactory.createMethodFromText(code.toString(), psiClass);

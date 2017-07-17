@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.leon.databinding.generate.all.filed.setter</id>
   <name>databinding generateAllFiledSetter</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="zpczjl@126.com" url="https://github.com/njleonzhang/">leon zhang</vendor>
 
   <description><![CDATA[
